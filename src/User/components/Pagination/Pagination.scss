@@ -1,0 +1,7 @@
+@import "/src/style/style.scss";
+
+.pagination {
+    @include position(relative, null, 0, 0, 0);
+    @include paddingY(1rem);
+    text-align: center;
+}

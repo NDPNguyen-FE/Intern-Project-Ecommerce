@@ -1,0 +1,50 @@
+@import "/src/style/style.scss";
+
+.sidebar {
+    @include position(relative);
+    padding-top: 2rem;
+    background-color: $color-white;
+    float: left;
+    z-index: 9;
+    width: 300px;
+
+    &__list { 
+        @include position(relative);
+        @include paddingX(2rem);
+    }
+
+    &__item { 
+        @include textStyle(0.9rem, $color-black, 500, none);
+        @include marginY(0.5rem)
+        cursor: pointer;
+    }
+
+    &__text { 
+        padding-left: 1rem;
+        cursor: pointer;
+    }
+
+    &__icon {
+        @include position(absolute, 0, null, 2rem);
+    }
+
+    &__text.sub--active {
+        background-color: $color-gray;
+    }
+
+    .active, .sub--active {
+        color: $color-green;
+    }
+
+    &__sub {
+        @include textStyle(0.8rem, $color-black, 500, none);
+        display: none;
+        margin-left: 0.5rem;
+        line-height: 2rem;
+    }
+
+    .active ~ &__sub {
+        transition: all 0.5s;
+        display: block;
+    }
+}

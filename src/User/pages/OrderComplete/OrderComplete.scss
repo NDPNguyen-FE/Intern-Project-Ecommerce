@@ -1,0 +1,10 @@
+@import "/src/style/style.scss";
+
+.order-complete {
+    height: 100vh;
+    
+    .result-complete {
+        @include position(relative, 50%, 50%);
+        @include cssPrefix(transform, translate(-50%, -50%));
+    }
+}

@@ -1,0 +1,39 @@
+@import "/src/style/style.scss";
+
+.choose {
+    @include paddingY(2rem);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    &-container {
+        width: 60%;
+        text-align: center;
+
+        p {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    &-title {
+        @include textStyle(2rem, $color-green, 700, uppercase);
+    }
+
+    &-criteria {
+        
+        h3 {
+            @include textStyle(1.3rem, $color-green, 700, uppercase);
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-item {
+        display: flex!important;
+        flex-direction: column;
+        justify-content: space-between; ;
+    }
+}

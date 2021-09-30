@@ -1,0 +1,5 @@
+@import "/src/style/style.scss";
+
+.table {
+    @include marginA(3rem);
+}

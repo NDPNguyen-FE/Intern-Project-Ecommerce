@@ -1,0 +1,47 @@
+@import "/src/style/style.scss";
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(172deg,rgba(0,240,255,0) 0%, rgba(5,255,0,0.3) 50%, $color-green 100%);
+
+    &-form {
+        width: 300px;
+    }
+
+    &-logo {
+        margin-bottom: 2rem;
+    }
+
+    &-form-button {
+        @include border(0.02rem, $color-white, all);
+        @include textStyle(1rem, $color-white, 700, uppercase);
+        width: 100%;
+        margin-bottom: 1rem;
+        height: 3rem;
+        background-color: $color-green;
+        border-radius: 2rem;
+        box-shadow: -1px 3px 29px 8px rgba(80,189,141,0.75);
+
+        &:hover {
+            @include border(0.02rem, $color-white, all);
+            background-color: $color-green;
+        }
+    }
+
+    .back-home {
+        display: inline-block;
+        float: right
+    }
+
+    &-link {
+        @include textStyle(1rem, $color-purple, 400, capitalize);
+
+        &:hover {
+            color: $color-purple;
+        }
+    }
+}

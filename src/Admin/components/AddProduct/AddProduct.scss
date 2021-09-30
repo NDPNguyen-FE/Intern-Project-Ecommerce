@@ -1,0 +1,16 @@
+@import "/src/style/style.scss";
+
+.addProduct {
+    &-button {
+        @include textStyle(1rem, $color-white, 500, none);
+        height: 2rem;
+    }
+
+    .button-success {
+        background-color: $color-green;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}

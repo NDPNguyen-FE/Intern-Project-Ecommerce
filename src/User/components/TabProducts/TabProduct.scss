@@ -1,0 +1,47 @@
+@import "/src/style/style.scss";
+
+.tabs {
+    @include paddingY(4rem);
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    background-color: #10e32647;
+
+    &-title {
+        @include textStyle(2rem, $color-green, 700, Uppercase);
+    } 
+
+    .ant-tabs-tab.ant-tabs-tab-active {
+        background-color: $color-white;
+    } 
+
+    .ant-tabs-tab.ant-tabs-tab .ant-tabs-tab-btn {
+        color: $color-green;
+    }
+
+    .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: $color-green;
+    }
+
+    &-image {
+
+        img {
+            border-radius: 1rem;
+            box-shadow: -2px 2px 12px 1px rgba(115,104,104,0.75);
+        }
+    }
+    
+    .ant-tabs-card .ant-tabs-tab {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .ant-tabs-tab.ant-tabs-tab-active {
+        background-color: $color-white;
+    }
+
+    .ant-tabs-card > .ant-tabs-nav::before {
+        display: none;
+    }
+}

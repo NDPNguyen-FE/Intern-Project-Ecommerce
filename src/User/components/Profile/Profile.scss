@@ -1,0 +1,39 @@
+@import '/src/style/style.scss';
+
+.profile {
+    
+    &-row {
+        @include marginY(2rem);
+
+        button {
+            @include textStyle(1rem, $color-white, 500, none);
+            @include paddingX(3rem);
+            height: 3rem;
+            background-color: $color-green;
+            border-radius: 2rem;
+            
+            &:hover {
+                border-color:$color-green;
+                color: $color-green;
+            }
+        }
+    }
+
+    &-position {
+        @include textStyle(1.3rem, $color-black, 700, none);
+    }
+
+    &-order {
+        @include marginY(2rem);
+        @include paddingA(1rem);
+        background-color:$color-gray;
+
+        .site-wrapper {
+            text-align: center;
+        }
+
+        .site-label {
+            @include textStyle(1rem, $color-black, 500, none);
+        }
+    }
+}

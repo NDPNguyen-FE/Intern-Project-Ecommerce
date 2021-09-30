@@ -1,0 +1,12 @@
+@import '/src/style/style.scss';
+
+.main-content {
+    @include position(relative);
+    @include paddingA(2rem);
+    width: 100%;
+    background-color:#F7F7F7 ;
+
+    .main-notfound {
+        margin: 0 auto;
+    }
+}

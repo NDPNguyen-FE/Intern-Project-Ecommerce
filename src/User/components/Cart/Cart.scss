@@ -1,0 +1,79 @@
+@import "/src//style/style.scss";
+
+.cart {
+
+    &-button {
+        @include paddingA(0.6rem);
+        @include position(fixed, 50%, null, 0, null);
+        z-index: 10;
+        background-color: $color-green;
+        border-radius: 0.5rem 0 0 0.5rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &-quantity {
+        @include textStyle(0.8rem, $color-white, 700, none);
+    }
+
+    &-price {
+        @include textStyle(0.8rem, $color-green, 700, none);
+        @include paddingY(0.3rem);
+        @include paddingX(1.3rem);
+        background-color: $color-white;
+        border-radius: 0.4rem;
+    }
+
+    &-item {
+        @include paddingY(1rem);
+        @include border($color-gray, 0.02rem, bottom);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .ant-input-number {
+            width: 50px;
+        }
+    }
+
+    &-image {
+        
+        img {
+            width: 100px;
+        }
+    }
+
+    &-remove {
+        cursor: pointer;
+    }
+
+    &-found {
+        text-align: center;
+
+        h3 {
+            @include textStyle(0.9rem, $color-sub, 700, none);
+            padding-top:2rem;
+        }
+    }
+
+    &-footer {
+        .footer-button {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: $color-green;
+
+            .footer-name {
+                @include textStyle(0.9rem, $color-white, 700, none);
+            }
+
+            .footer-price {
+                @include paddingY(0.1rem);
+                @include paddingX(1rem);
+                @include textStyle(0.9rem, $color-green, 700, none);
+                background-color: $color-white;
+                border-radius: 1rem;
+            }
+        }
+    }
+}

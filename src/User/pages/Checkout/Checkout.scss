@@ -1,0 +1,30 @@
+@import "/src/style/style.scss";
+
+.checkout {
+    background-color: $color-gray;
+    height: 100vh;
+    
+    &-container {
+        @include position(absolute, 15%, 50% , 0);
+        @include cssPrefix(transform, translateX(-50%));
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &-col {
+        @include paddingA(2rem);
+
+    }
+
+    &-profile {
+        box-shadow: rgba(0, 0, 0, 0.08 ) 0px 2px 26px 0px;
+        background-color: $color-white;
+    }
+
+    &-button {
+        @include textStyle(1rem, $color-white, 500, none);
+        background-color: $color-green;
+        height: 3rem;
+        border-radius: 0.5rem;
+    }
+}

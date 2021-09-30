@@ -1,0 +1,36 @@
+@import "/src/style/style.scss";
+
+
+.lastest {
+    @include paddingY(2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #10e32647;
+
+    &-title {
+        @include textStyle(2rem, $color-green, 700, none);
+        text-align: center;
+    }
+
+    &-product {
+        @include paddingY(2rem);
+        width: 60%;
+    }
+
+    &-button {
+
+        button {
+            @include paddingX(2rem);
+            @include textStyle(1.2rem, $color-green, 500, none);
+            height: 3rem;
+            background-color: transparent;
+            border-radius: 1.3rem;
+
+            &:hover {
+                border: none;
+                color: $color-green;
+            }
+        }
+    }
+}

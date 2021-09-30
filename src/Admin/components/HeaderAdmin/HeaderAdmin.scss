@@ -1,0 +1,22 @@
+@import '/src/style/style.scss';
+
+.header-admin {
+    .admin-button {
+        @include paddingX(2rem);
+        @include textStyle(1rem, $color-white, 500, none);
+        background-color: $color-green;
+        cursor: pointer;
+        border: none;
+    }
+
+    .admin-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .notification-button {
+        width: 100%;
+        text-align: center;
+    }
+}

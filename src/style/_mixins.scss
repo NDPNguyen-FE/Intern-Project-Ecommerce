@@ -1,0 +1,64 @@
+@mixin textStyle($fontsize, $textColor, $fontweight, $transform) {
+    font-size: $fontsize;
+    color: $textColor;
+    font-weight: $fontweight;
+    text-transform: $transform;
+}
+  
+@mixin border($color, $width, $direction) {
+    @if ($direction == all) {
+      border: $width solid $color;
+    } @else {
+      border-#{$direction}: $width solid $color;
+    }
+}
+  
+@mixin cssPrefix($prop, $value) {
+    -webkit-#{$prop}: $value;
+    -moz-#{$prop}: $value;
+    -ms-#{$prop}: $value;
+    -o-#{$prop}: $value;
+    #{$prop}: $value;
+}
+  
+@mixin position($prop, $top: null, $left: null, $right: null, $bottom: null) {
+    position: $prop;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+  
+@mixin marginX($number) {
+    margin: 0 $number;
+}
+  
+@mixin marginY($number) {
+    margin: $number 0;
+}
+  
+@mixin marginA($number) {
+    margin: $number;
+}
+  
+@mixin paddingX($number) {
+    padding-left: $number;
+    padding-right: $number;
+}
+  
+@mixin paddingY($number) {
+    padding-top: $number;
+    padding-bottom: $number;
+}
+  
+@mixin paddingA($number) {
+    padding: $number;
+}
+  
+@mixin position($prop, $top: null, $left: null, $right: null, $bottom: null) {
+    position: $prop;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}

@@ -1,0 +1,24 @@
+@import "/src/style/style.scss";
+
+.card {
+    @include cssPrefix(transition, all 1s)
+    box-shadow: -2px 2px 12px 1px rgba(115,104,104,0.4);
+
+    img {
+        height: 10rem;
+        object-fit: contain;
+        cursor: pointer;
+    }
+    
+    &:hover {
+        @include cssPrefix(transform, translateY(-0.5rem));
+    }
+
+    .ant-card-actions {
+        li {
+            span {
+                @include textStyle(1.2rem, $color-green, 500, none);
+            }
+        }
+    }
+}

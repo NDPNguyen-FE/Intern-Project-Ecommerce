@@ -1,0 +1,9 @@
+@import "/src/style/style.scss";
+
+.sort {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

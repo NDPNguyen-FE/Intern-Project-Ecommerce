@@ -1,0 +1,11 @@
+@import "/src/style/style.scss";
+
+.filter-product {
+    @include paddingA(2rem);
+    @include marginA(1rem);
+    background-color: $color-white;
+
+    h3 {
+        @include textStyle(1.3rem, $admin-text, 500, none);
+    }
+}

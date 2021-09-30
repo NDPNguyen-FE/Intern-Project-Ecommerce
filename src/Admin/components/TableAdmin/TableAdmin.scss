@@ -1,0 +1,17 @@
+@import "/src/style/style.scss";
+
+.card-admin {
+    margin-bottom:1rem;
+    
+    .ant-card-cover {
+        text-align: center;
+        
+        img { 
+            @include cssPrefix(object-fit, contain);
+            width: 200px;
+            height: 150px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    }
+}

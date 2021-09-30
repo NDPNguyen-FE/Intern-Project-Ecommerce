@@ -1,0 +1,10 @@
+@import  "/src/style/style.scss";
+
+.carousel {
+    @include paddingY(4rem);
+
+    &__item {
+        cursor: pointer;
+        text-align: -webkit-center;
+    }
+}

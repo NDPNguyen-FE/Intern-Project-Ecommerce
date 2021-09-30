@@ -1,0 +1,45 @@
+@import "/src/style/style.scss";
+
+.banner {
+    @include position(relative);
+    height: 100vh;
+    background: url("../../../assets/banner-voucher/bg-container.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &__container {
+        @include position(absolute, 50%, 50%)
+        @include cssPrefix(transform, translate(-50%, -50%));
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        @include textStyle(2.8rem, $color-black, 700, none);
+    }
+
+    &__sub {
+        @include textStyle(1rem, $color-sub, 400, none);
+    }
+
+    &__button {
+        text-align: center;
+
+        button {
+            @include paddingX(2rem);
+            @include textStyle(1rem, $color-white, 500, none);
+            background-color: $color-green;
+            height: 3rem;
+            border-radius: 1rem;
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-green;
+                border: none;
+            }
+        }
+    }
+}

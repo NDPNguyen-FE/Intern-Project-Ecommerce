@@ -1,0 +1,6 @@
+@import "/src/style/style.scss";
+
+.pagination-admin{
+    @include marginY(1rem);
+    text-align: center;
+}

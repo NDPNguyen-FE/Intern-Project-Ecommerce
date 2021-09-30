@@ -1,0 +1,92 @@
+@import "/src/style/style.scss";
+
+.modal {
+    
+    .ant-modal-content {
+        box-shadow: none;
+    }
+
+    &-detail {
+        @include paddingA(2.3rem);
+        display: flex;
+        gap: 2rem;
+    }
+
+    &-content {
+        padding-right: 1rem;
+    }
+
+    &-slide {
+        display: flex;
+        flex-direction: column;
+        width: 50%,
+    }
+
+    &-title {
+        @include textStyle(1.3rem, $color-black, 600, capitalize);
+        line-height: 32px;
+    }
+
+    &-weight {
+        @include textStyle(0.8rem, $color-sub, 400, none);
+    }
+
+    &-description {
+        @include textStyle(0.9rem, $color-black, 400, none);
+        line-height: 30px;
+    }
+
+    &-cart {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-price {
+        @include textStyle(1.3rem, $color-green, 700, none)
+    }
+
+    &-tag {
+        @include marginY(2rem);
+    }
+
+    &-button {
+        @include textStyle(0.9rem, $color-green, 700, none);
+
+        &:hover {
+            border-color: $color-green;
+            background-color: $color-green;
+            color: $color-white;
+        }
+    }
+
+    .slick-dots {
+        width: 19rem;
+        display: flex !important;
+        justify-content: space-around;
+        bottom: 1.6rem;
+        left: 3rem;
+    }
+
+    .slick-active .slider-dot {
+        @include border($color-green, 0.17rem, all);
+        border-radius: 0.3rem;
+    }
+
+    .slider-dot {
+        width: 3.1rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .dot-image {
+        width: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .slick-arrow {
+        display: none!important;
+    }
+}

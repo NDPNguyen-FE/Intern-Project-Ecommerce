@@ -1,0 +1,13 @@
+@import "/src/style/style.scss";
+
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    &-form {
+        width: 700px;
+    }
+}

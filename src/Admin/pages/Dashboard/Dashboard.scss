@@ -1,0 +1,36 @@
+@import "/src/style/style.scss";
+
+.dashboard {
+    @include paddingA(2rem);
+    
+    &-column {
+        @include paddingY(2rem);
+        @include paddingX(2rem);
+        margin-right: 1rem;
+        background-color: $color-white;
+    }
+
+    &-title {
+        @include textStyle(1rem, $admin-text, 700, capitalize);
+    }
+
+    &-sub {
+        @include textStyle(0.8rem, $color-sub, 700, capitalize);
+    }
+
+    &-count {
+        @include textStyle(1.3rem, $admin-text, 700, capitalize);
+    }
+
+    &-status {
+        @include textStyle(0.9rem, $color-green, 700, none);
+    }
+
+    &-link {
+        @include textStyle(0.9rem, $color-purple, 700, none);
+
+        &:hover {
+            color: $color-green;
+        }
+    }
+}

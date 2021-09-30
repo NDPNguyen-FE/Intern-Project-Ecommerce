@@ -1,0 +1,128 @@
+@import "/src/style/style.scss";
+
+.product-detail {
+    @include marginY(7rem);
+
+    &__container {
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .product-slide {
+        @include border(0.02rem, $color-green, all);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .product-breakcrumb {
+        @include marginY(1rem);
+        @include paddingX(8rem);
+        @include paddingY(2rem);
+        background-color:  $color-gray;
+    }
+
+    .slick-dots {
+        width: 19rem;
+        display: flex !important;
+        justify-content: space-around;
+        bottom: -2rem;
+        left: 9rem;
+    }
+
+    .slick-active .slider-dot {
+        @include border($color-green, 0.17rem, all);
+        border-radius: 0.3rem;
+    }
+
+    .slider-dot {
+        width: 3.1rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .dot-image {
+        width: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .slick-arrow {
+        display: none!important;
+    }
+
+    .product-information {
+        padding-left: 1rem;
+
+        .product-name {
+            @include textStyle(2rem, $color-black, 500, capitalize);
+        }
+
+        .product-status, .product-tag {
+            @include textStyle(1rem, $color-black, 500, capitalize);
+            
+            span {
+                @include textStyle(1rem, $color-green, 400, none);
+            }
+        }
+
+        .product-description {
+            @include textStyle(1.2rem, $color-sub, 400, none);
+        }
+
+        .product-price {
+            @include textStyle(1.7rem, $color-green, 700, none);
+        }
+
+        .product-wishlist {
+            background-color: $color-gray;
+
+            &:hover {
+                color: $color-green;
+                border-color: $color-green;
+            }
+        }
+
+        .product-addCart, .product-wishlist {
+            @include textStyle(1rem, $color-white, 700, uppercase);
+            height: 3rem;
+            border-radius: 2rem;
+        }
+
+        .product-addCart {
+            background-color: $color-green;
+        }
+
+        .product-wishlist {
+            background-color: $color-black;
+        }
+    }
+
+    .product-comment {
+        width: 65%;
+        margin: 4rem auto ;
+    }
+
+    .product-form { 
+        width: 100%;
+
+        .submit-review {
+            @include textStyle(0.6rem, $color-white, 500, uppercase);
+            @include paddingX(2rem);
+            background-color: $color-black;
+            height: 2.5rem;
+        }
+    }
+
+    &__share {
+        display: flex;
+        
+        li {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "/src/style/style.scss";
+
+.side-admin {
+    @include paddingY(2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+
+    .side-link {
+        @include paddingY(1rem);
+        @include textStyle(1.2rem, $color-green, 500, none);
+        @include border($color-gray, 0.02rem, top);
+        @include border($color-gray, 0.02rem, bottom);
+        padding-left: 1rem;
+        display: block; 
+    }
+}
